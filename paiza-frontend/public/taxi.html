@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タクシー</title>
+  <link rel="stylesheet" href="./css/destyle.css">
+  <link rel="stylesheet" href="./css/taxi.css">
+</head>
+<body>
+  <section class="section">
+    <div class="taxi-calculator">
+      <div class="taxi-calculator__form">
+        <form class="taxi-form">
+          <div class="taxi-form__title">
+            <h1 class="basic-title">
+              タクシー料金計算
+            </h1>
+          </div>
+          <div class="taxi-form__line">
+            <label class="taxi-form__label" for="distance-to-destination">目的地までの距離</label>
+            <input class="taxi-form__input" id="distance-to-destination" type="text" placeholder="テキスト">
+            <span class="taxi-form__unit">m</span>
+          </div>
+          <div class="taxi-form__line">
+            <label class="taxi-form__label" for="first-meter">初乗り距離</label>
+            <input class="taxi-form__input" id="first-meter" type="text" placeholder="テキスト">
+            <span class="taxi-form__unit">m</span>
+          </div>
+          <div class="taxi-form__line">
+            <label class="taxi-form__label" for="basic-fare">初乗り運賃</label>
+            <input class="taxi-form__input" id="basic-fare" type="text" placeholder="テキスト">
+            <span class="taxi-form__unit">円</span>
+          </div>
+          <div class="taxi-form__line">
+            <label class="taxi-form__label" for="additional-meter">加算距離</label>
+            <input class="taxi-form__input" id="additional-meter" type="text" placeholder="テキスト">
+            <span class="taxi-form__unit">m</span>
+          </div>
+          <div class="taxi-form__line">
+            <label class="taxi-form__label" for="additional-fare">加算運賃</label>
+            <input class="taxi-form__input" id="additional-fare" type="text" placeholder="テキスト">
+            <span class="taxi-form__unit">円</span>
+          </div>
+          <div class="taxi-form__button">
+            <button class="basic-button">
+              計算ボタン
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="taxi-calculator__result">
+        <div class="calculator-result">
+          <div class="calculator-result__title">
+            <h2 class="basic-title">
+              計算結果
+            </h2>
+          </div>
+          <p class="calculator-result__price">1000<span class="calculator-result__unit">円</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,130 @@
+// colors
+$base-color: #333;
+$gray1: #888;
+
+// TODO: media queriesとかほんとはmixinにしたい
+
+// 幅制限用
+@mixin width-limiter($pc-max-width: 800px) {
+  $gutter: 40px;
+  max-width: $pc-max-width + $gutter * 2;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (max-width: 600px) {
+    $sp-gutter: 20px;
+    max-width: 100%;
+    padding-right: $sp-gutter;
+    padding-left: $sp-gutter;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// body
+body {
+  color: $base-color;
+  font-size: 1.6rem;
+}
+
+// section
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #D7EDAF;
+}
+
+// taxi-calclator
+.taxi-calculator {
+  @include width-limiter(500px);
+  &__form {
+  }
+  &__result {
+    padding-top: 60px;
+  }
+}
+
+// taxi-form
+.taxi-form {
+  &__title {
+    text-align: center;
+  }
+  &__line {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  &__label {
+    width: 15em;
+    display: block;
+  }
+  &__input {
+    border: 1px solid $gray1;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  &__unit {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 0.5em;
+  }
+  &__button {
+    padding-top: 40px;
+  }
+}
+
+// calculator-result
+.calculator-result {
+  &__title {
+    text-align: center
+  }
+  &__price {
+    padding-top: 30px;
+    font-size: 2rem;
+  }
+  &__unit {
+    font-size: 1.8rem;
+  }
+}
+
+// basic-button
+.basic-button {
+  display: block;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #c9d2fc;
+  border: 1px solid #A5C6EF;
+  border-radius: 100px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+}
+
+// basic-title
+.basic-title {
+  display: inline-block;
+  position: relative;
+  font-size: 2.4rem;
+  padding-bottom: 10px;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 5px auto 0;
+    content: '';
+    display: block;
+    width: 80%;
+    height: 4px;
+    background-color: $base-color;
+    border-radius: 100px;
+  }
+}

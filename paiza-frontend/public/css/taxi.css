@@ -1,0 +1,106 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #D7EDAF;
+}
+
+.taxi-calculator {
+  max-width: 580px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 600px) {
+  .taxi-calculator {
+    max-width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.taxi-calculator__result {
+  padding-top: 60px;
+}
+
+.taxi-form__title {
+  text-align: center;
+}
+.taxi-form__line {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.taxi-form__label {
+  width: 15em;
+  display: block;
+}
+.taxi-form__input {
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+}
+.taxi-form__unit {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 0.5em;
+}
+.taxi-form__button {
+  padding-top: 40px;
+}
+
+.calculator-result__title {
+  text-align: center;
+}
+.calculator-result__price {
+  padding-top: 30px;
+  font-size: 2rem;
+}
+.calculator-result__unit {
+  font-size: 1.8rem;
+}
+
+.basic-button {
+  display: block;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #c9d2fc;
+  border: 1px solid #A5C6EF;
+  border-radius: 100px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+.basic-button:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.basic-title {
+  display: inline-block;
+  position: relative;
+  font-size: 2.4rem;
+  padding-bottom: 10px;
+}
+.basic-title::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 5px auto 0;
+  content: "";
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: #333;
+  border-radius: 100px;
+}
